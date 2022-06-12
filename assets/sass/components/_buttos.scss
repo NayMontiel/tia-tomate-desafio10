@@ -1,0 +1,10 @@
+// button 
+button{
+    color: $gray;
+    background-color: $fondo;
+    border: none;
+}
+button:hover{
+    background: $gray;
+    color: $white;
+}

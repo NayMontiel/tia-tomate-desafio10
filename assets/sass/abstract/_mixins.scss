@@ -1,0 +1,67 @@
+/*usando mixin*/
+@mixin logo_mixin(){
+    width: 200px;
+    height: 50px;
+    margin-left: 60px;
+}
+
+@mixin nosotros_img(){
+    width: 350px;
+    height: 400px;
+}
+
+@mixin nosotros_title($color){
+    font-weight: $bold;
+    padding: 10px;
+    color: $color;
+}
+
+@mixin nosotros_text(){
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    font-weight: $regular;
+    font-size: $medium;
+    margin-left: 210px;
+    margin-right: 210px;
+}
+
+@mixin footer_mixin(){
+    width: 200px;
+    height: 70px;
+}
+
+
+// nav
+.logo{
+    @include  logo_mixin();
+}
+
+// main
+.info__nosotros_img1{
+    @include nosotros_img();
+}
+.info__nosotros_img2{
+    @include nosotros_img();
+}
+
+
+.info__nosotros_title1{
+    @include nosotros_title($gray);
+}
+.info__nosotros_title2{
+    @include nosotros_title($gray);
+}
+
+
+.info__nosotros_text1{
+    @include nosotros_text();
+}
+.info__nosotros_text2{
+    @include nosotros_text();
+}
+
+// footer
+.img-footer{
+   @include footer_mixin();
+}
